@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/styles/style.css')
+  body
+
+    block content
+
+    //- Vendor libs
+    script(src='/components/jquery/dist/jquery.js')
+    script(src='/components/underscore/underscore-min.js')
+    script(src='/components/backbone/backbone-min.js')
+
+    //- Template example - I recommend storing templates in separate files
+    //- and either pre-compiling or ajax loading using a tool like
+    //- requirejs http://requirejs.org/
+    script#calculator-template(type='text/template').
+      <p data-key="name">What is your name?</p>
+      <input type="text">
+      <span>Next</span>
+
+    //- App Javascript
+    script(src='/js/helper.js')
+    script(src='/js/model.js')
+    script(src='/js/view.js')
+    script(src='/js/main.js')
+
+
